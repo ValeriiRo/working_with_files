@@ -15,9 +15,8 @@ for file in txt_files:
     creating_a_file += [str(file_number)]
     for writing_file in writing_files:
         creating_a_file += [writing_file.strip()]
-new_file = open(r"C:\Users\vv\Desktop\working_with_files\New_file\New_file.txt", "w", encoding="UTF-8")
+file_path = os.path.join(os.getcwd(), "New_file", "New_file.txt")
+new_file = open(file_path, "w", encoding="UTF-8")
 creating_a_file = '\n'.join(creating_a_file)
 new_file.write(creating_a_file)
-
-
-
+print(f"Файл сохранён: {file_path}")

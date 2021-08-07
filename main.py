@@ -22,6 +22,10 @@ def file_creation(txt_files):
     return creating_a_file
 
 def save_files(creating_a_file):
+    if os.path.exists('New_file'):
+        pass
+    else:
+        os.mkdir('New_file')
     file_path = os.path.join(os.getcwd(), "New_file", "New_file.txt")
     new_file = open(file_path, "w", encoding="UTF-8")
     creating_a_file = '\n'.join(creating_a_file)
